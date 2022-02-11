@@ -89,11 +89,6 @@ def train():
         avg_train_loss = total_train_loss / train_steps
         avg_test_loss = total_test_loss / test_steps
         
-        print(avg_train_loss)
-        print(avg_train_loss.cpu())
-        print(avg_train_loss.cpu().detach())
-        print(avg_train_loss.cpu().detach().numpy())
-        
         H["train_loss"].append(avg_train_loss.cpu().detach().numpy())
         H["test_loss"].append(avg_test_loss.cpu().detach().numpy())
         
